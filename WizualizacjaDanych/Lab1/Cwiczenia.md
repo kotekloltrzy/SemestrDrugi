@@ -11,10 +11,13 @@ hello_wordl()
 def tabliczka_mnozenia(n):
     if 0 < n < 100:
         wiersz = 0
+        a = 0
         for tabliczki in range(0, n+1):
+            print(f'Tabliczka mnożenia dla n = {a}')
             for wiersze in range(0, n+1):
                 print(wiersze, "*",wiersz,"=", wiersze * wiersz)
             wiersz += 1
+            a += 1
     else:
         print("n is too large")
 tabliczka_mnozenia(int(input(f'Podaj liczbę całkowitą n: ')))
