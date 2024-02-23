@@ -8,19 +8,16 @@ hello_wordl()
 
 ### ćwiczenie 6 a
 ```python
-def tabliczka_mnozenia(n):
-    if 0 < n < 100:
-        wiersz = 0
-        a = 0
-        for tabliczki in range(0, n+1):
-            print(f'Tabliczka mnożenia dla n = {a}')
-            for wiersze in range(0, n+1):
-                print(wiersze, "*",wiersz,"=", wiersze * wiersz)
-            wiersz += 1
-            a += 1
+def tabliczka(n):
+    m = abs(n)
+    if 0 < m < 100:
+        for a in range(0, m+1):
+            for b in range(0, m+1):
+                print(a*b, end='\t')
+            print()
     else:
         print("n is too large")
-tabliczka_mnozenia(int(input(f'Podaj liczbę całkowitą n: ')))
+tabliczka(int(input(f'Podaj liczbę całkowitą n: ')))
 ```
 
 ### Ćwiczenie 6 b
