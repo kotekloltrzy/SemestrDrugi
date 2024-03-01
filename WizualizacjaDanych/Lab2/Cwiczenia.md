@@ -24,15 +24,10 @@ tekst = "kotek lubi pić mleczko"
 
 
 def parzyste_indeksy(string):
-    wynik = ""
-    index = 0
-    for litera in string:
-        if index % 2 == 0:
-            wynik += litera
-        index += 1
-    return wynik
+    print(string[::2])
 
-print(parzyste_indeksy(tekst))
+
+parzyste_indeksy(tekst)
 ```
 ### zwraca n (podano, domyslne 1) ostatnich znaki w podanym stringu;
 ```python
