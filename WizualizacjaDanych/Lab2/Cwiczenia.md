@@ -73,9 +73,10 @@ def ktory_dluzszy(str1):
     dlugosc2 = len(str2)
     if dlugosc1 > dlugosc2:
         print("Pierwszy string jest dłużsy od drugiego")
-    else:
+    if dlugosc1 < dlugosc2:
         print("Drugi string jest dłuższy od pierwszego")
-
+    else:
+        print("Oba stringi są tej samej długości")
 
 ktory_dluzszy(tekst)
 ```
