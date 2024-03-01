@@ -67,7 +67,8 @@ czy_palindrom(tekst)
 
 ### pobiera 2 stringa i zwraca, które jest dłuższy (1 czy 2);
 ```python
-def ktory_dluzszy(str1, str2):
+def ktory_dluzszy(str1):
+    str2 = str(input(f'Podaj tekst: '))
     dlugosc1 = len(str1)
     dlugosc2 = len(str2)
     if dlugosc1 > dlugosc2:
@@ -75,7 +76,8 @@ def ktory_dluzszy(str1, str2):
     else:
         print("Drugi string jest dłuższy od pierwszego")
 
-ktory_dluzszy(tekst, tekst2)
+
+ktory_dluzszy(tekst)
 ```
 
 ### Napisz funkcję, która wstawi podane imie i datę urodzenia do stringu 'My name is ... . My date of birth is... .'
