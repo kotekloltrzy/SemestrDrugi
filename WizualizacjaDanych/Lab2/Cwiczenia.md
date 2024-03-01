@@ -89,7 +89,7 @@ formatowanie()
 ```
 
 # Zadanie 3
-## Napisz program (program23.py), który na wejściu dostaje napis postaci "W Roku Pańskim 1345, władca Henryk 12, na rzecz swoich 143209 poddanych uchwalił dekret o 20 procentowej zniżce podatków." Twoim zadaniem jest wyłuskać wszystkie liczby (niech będą tylko całkowite) i wyswietlić ich sumę.
+## Napisz program (program23.py), który na wejściu dostaje napis postaci "W Roku Pańskim 1345, władca Henryk 12, na rzecz swoich 143209 poddanych uchwalił dekret o 20 procentowej zniżce podatków." Twoim zadaniem jest wyłuskać wszystkie liczby (niech będą tylko całkowite) i wyswietlić ich sumę.
 ```python
 
 ```
