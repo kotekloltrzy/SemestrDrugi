@@ -152,12 +152,15 @@ def liczby(string):
     cyfry = ''
     wynik = 0
     for litera in string:
-        if litera.isnumeric():
+        if litera.isnumeric() or litera == " " or litera == "-":
             cyfry += litera
-    for a in cyfry:
+    lista = cyfry.split()
+    print(lista)
+    for a in lista:
         wynik += int(a)
     print(wynik)
 
 
 liczby(napis)
+
 ```
