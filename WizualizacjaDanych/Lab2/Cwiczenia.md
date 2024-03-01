@@ -36,9 +36,9 @@ print(parzyste_indeksy(tekst))
 ```
 ### zwraca n (podano, domyslne 1) ostatnich znaki w podanym stringu;
 ```python
-def ostatnie_znaki(string):
-    n = int(input(f'Podaj n: '))
-    print(string[-n])
+def ostatnie_znaki(string, n=1):
+    print(string[-n:])
+
 
 ostatnie_znaki(tekst)
 ```
