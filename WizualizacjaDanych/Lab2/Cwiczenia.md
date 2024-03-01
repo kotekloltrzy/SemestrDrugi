@@ -1,4 +1,59 @@
 # Zadanie 1
+## a) Utwórz plik program21.py
+### Czy wiesz, co robią funkcje sufit i podłoga ( math.ceil(), math.floor() )? Porównaj z funkcją round()
+```python
+import math
+liczba = 12.4
+print(math.ceil(liczba))
+print(math.floor(liczba))
+print(round(liczba))
+```
+### Przeczytaj różnicę pomiędzy math.fmod(x, y) oraz x%y. Napisz funkcje, która zwraca x%y jeżeli x,y są integer oraz math.fmod(x, y) jeżeli chociażby jeden z nich jest float.
+```python
+def modulo(liczba1, liczba2):
+    if isinstance(liczba1, float) or isinstance(liczba2, float):
+        print(math.fmod(liczba1, liczba2))
+    else:
+        print(liczba1 % liczba2)
+
+
+modulo(liczba, y)
+```
+### Napisz funkcje, która dla podanych liczb a, n wypisuje na konsoli w jednym wierszu logka dla każdego k od 2 do n, podzielone separatorem |.
+```python
+def logarytmy(a, n):
+    for k in range(2, n+1):
+        print(math.log(a, k), end=" | ")
+        
+        
+logarytmy(10, 5)
+```
+### Napisz funkcje, która dla podanej liczby a zwraca math.exp(a), math.e**a, math.pow(math.e, a)
+```python
+def potega(a):
+    print(math.exp(a))
+    print(math.e**a)
+    print(math.pow(math.e, a))
+
+potega(10)
+```
+
+## b) Ćwiczyć przy pomocy Python Console.
+### Znaleźć przykład, dla którego wynik math.pow() różni się od wynika ∗∗.
+```python
+
+```
+### Znaleźć przykład, dla którego wynik math.remainder() różni sie od wynika %.
+```python
+
+```
+### Co to jest za funkcje cosh oraz sinh? Sprawdź, czy na ile ich wyniki róznią sie od obliczenia według definicji (można spróbować uzywać math.isclose()).
+```python
+print(math.cosh(1))
+print(math.sinh(1))
+```
+
+# Zadanie 2
 ## a) Stwórz zmienną str i przypisz jej dowolny długi string (mający co najmniej 20 znaków). Pracuj na konsoli
 ### wyświetl znak o indeksie 12
 ```python
