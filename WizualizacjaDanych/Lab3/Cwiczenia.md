@@ -158,3 +158,33 @@ def usuwanie_powtorzen(lista):
 
 print(usuwanie_powtorzen(lista1))
 ```
+# Ćwiczenie 4
+## a)
+```python
+imiona = {"Michał":123456789, "Adam":234567890, "Jakub":345678901,"Oskar":456789012}
+
+def print_phone_numbers(slownik):
+    for dane in slownik:
+        print(f"{dane} ma {slownik[dane]} numer telefonu")
+
+
+print_phone_numbers(imiona)
+```
+## b)
+```python
+imiona = {"Michał":123456789, "Adam":234567890, "Jakub":345678901,"Oskar":456789012}
+polski = {"Poniedziałek":1,"Wtorek":2,"Środa":3,"Czwartek":4, "Piątek":5, "Sobota":6, "Niedziela":7}
+angielski = {"Mondey":1,"Tuesday":2,"Wednesday":3,"Thursday":4, "Friday":5, "Saturday":6, "Sunday":7}
+
+def print_phone_numbers(slownik):
+    for dane in slownik:
+        print(f"{dane} ma {slownik[dane]} numer telefonu")
+
+
+print_phone_numbers(imiona)
+
+def polski_angielski(slownik):
+    wynik = {}
+    for dzien in slownik:
+        
+```
