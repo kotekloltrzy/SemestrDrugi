@@ -62,7 +62,7 @@ nazwiska_wieksze_niz_6 = [x for x in lista_nazwisk if len(x)>6]
 print(nazwiska_wieksze_niz_6)
 
 def czy_posortowane(lista):
-    if lista == sorted(lista):
+    if lista == sorted(lista, reverse=True):
         return True
     else:
         return False
@@ -116,7 +116,45 @@ print(roznica_zbiorow)
 państwa.issubset(państwa2)
 ```
 # Ćwiczenie 3
+## a)
 ```python
 krotka = ("jabłko", 12, "kotek", 7, "mleko", 3, 21.37)
 krotka[2] = "piesek" ### nie da sie
+print(krotka[3])
+print(krotka[3:6])
+print(krotka[-3])
+```
+## b)
+```python
+lista1 = [12, 12, 34, 56, 56, 78, 12, 543, 90]
+kroteczka = ("jabłko", 12, "kotek", 7, "mleko", 3, 21.37)
+
+
+def dodawanie_do_krotki(krotka, element):
+    dodawanie = (element,)
+    wynik = krotka+dodawanie
+    return wynik
+
+
+print(dodawanie_do_krotki(kroteczka, "rybka"))
+
+
+def usuwanie_z_krotki(krotka, element):
+    lista = list(krotka)
+    lista.remove(element)
+    krotka = tuple(lista)
+    return krotka
+
+
+print(usuwanie_z_krotki(kroteczka, "mleko"))
+
+
+def usuwanie_powtorzen(lista):
+    wynik = []
+    for element in lista:
+        if element not in wynik:
+            wynik.append(element)
+    return wynik
+
+print(usuwanie_powtorzen(lista1))
 ```
