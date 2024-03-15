@@ -84,13 +84,7 @@ def dlugosc_stringow(*args):
 print(dlugosc_stringow("ala ma kota", "kot ma ale", "mleko stoi w lodówce"))
 
 def najmniejsza_najwieksza(*args):
-    lista = list(args)
-    lista.sort()
-    wynik = []
-    wynik.append(lista[0])
-    wynik.append(lista[-1])
-    odpowiedz = tuple(wynik)
-    return odpowiedz
+        return min(args), max(args)
 
 print(najmniejsza_najwieksza(12, 34, 65, 19, 1, 99, 15))
 ```
