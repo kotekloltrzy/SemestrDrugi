@@ -97,5 +97,103 @@ print(najmniejsza_najwieksza(12, 34, 65, 19, 1, 99, 15))
 
 # Ćwiczenie 4
 ```python
+def imie_numer_telefonu(**kwargs):
+    for n in kwargs:
+        print(n, "ma numer", kwargs[n])
+
+
+imie_numer_telefonu(Michal="123456789", Kuba="987654321")
+
+
+def srednie_zarobki(**kwargs):
+    wynik = 0
+    ilosc_miesiecy = 0
+    for n in kwargs:
+        wynik += int(kwargs[n])
+        ilosc_miesiecy += 1
+    wynik /= ilosc_miesiecy
+    return wynik
+
+
+print(srednie_zarobki(Styczen="123456", Luty="654321", Marzec="100000", Kwiecien='150000'))
+```
+
+# Ćwiczenie 5
+```python
+def czy_pesel(string):
+    if len(string) != 11:
+        print("Podano za mało znaków, porządana liczba ma 11 znaków")
+        return False
+    if string.isnumeric():
+        return True
+    print("Podany ciąg znaków jest o złym formacie, należy podać ciąg cyfr.")
+
+
+def data_urodzenia(string):
+    if czy_pesel(string):
+        rok = string[0:2]
+        miesiac = string[2:4]
+        dzien = string[4:6]
+        if 80 < int(miesiac) < 93:
+            rok = 1800 + int(string[0:2])
+            miesiac = int(miesiac) - 80
+        if 0 < int(miesiac) < 13:
+            rok = 1900 + int(string[0:2])
+            miesiac = int(miesiac)
+        if 20 < int(miesiac) < 33:
+            rok = 2000 + int(string[0:2])
+            miesiac = int(miesiac) - 20
+        if 40 < int(miesiac) < 53:
+            rok = 2100 + int(string[0:2])
+            miesiac = int(miesiac) - 40
+        if 60 < int(miesiac) < 73:
+            rok = 2200 + int(string[0:2])
+            miesiac = int(miesiac) - 60
+        print(f"Data urodzenia: {rok}/{miesiac}/{dzien}")
+
+
+def plec_pesel(string):
+    plec = string[10]
+    if int(plec) % 2 == 0:
+        wynik = "Kobieta"
+    wynik = "Mężczyzna"
+    print(f'Płeć: {wynik}')
+
+
+def cyfra_kontrolna(string):
+    jeden = 0
+    index = {1: 1, 2: 3, 3: 7, 4: 9, 5: 1, 6: 3, 7: 7, 8: 9, 9: 1, 10: 3, 11: 1}
+    miejsce = 0
+    for element in string[0:10]:
+        miejsce += 1
+        jeden += int(element) * index[miejsce]
+    dwa = jeden % 10
+    trzy = 10 - dwa
+    if dwa != 0:
+        if string[10] == trzy:
+            print("Podany pesel jest prawidłowy")
+            return True
+    elif dwa == 0:
+        if int(string[10]) == 0:
+            print("Podany pesel jest prawidłowy")
+            return True
+        else:
+            print("Podany pesel nie jest prawidłowy")
+            return False
+    else:
+        print("Podany pesel nie jest prawidłowy")
+        return False
+
+
+def pesel(string):
+    if czy_pesel(string):
+        data_urodzenia(string)
+        plec_pesel(string)
+        cyfra_kontrolna(string)
+    return(czy_pesel(string) and cyfra_kontrolna(string))
+
+
+a = pesel("03250800510")
+print(a)
 
 ```
