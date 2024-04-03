@@ -1,0 +1,12 @@
+class Car:
+    def __init__(self, marka, rok):
+        self.marka = marka
+        self.rok = rok
+
+
+car1 = Car("Toyota", 2002)
+car2 = Car("Opel", 1999)
+
+print(car1.marka, car1.rok, car2.marka, car2.rok)
+car1 = car2
+print(car1.marka, car1.rok, car2.marka, car2.rok)
