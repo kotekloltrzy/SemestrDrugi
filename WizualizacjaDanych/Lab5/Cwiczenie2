@@ -1,0 +1,17 @@
+class Fruit:
+    def __init__(self, weight, color="Red"):
+        self.color = color
+        self.weight = weight
+
+    def isfresh(self, color):
+        if color is self.color:
+            return True
+        return False
+
+
+Apple = Fruit(1)
+Banana = Fruit(5, "Yellow")
+Orange = Fruit(1, "Orange")
+print("Apple", Apple.color, Apple.weight, ", Banana", Banana.color, Banana.weight,
+      ", Orange", Orange.color, Orange.weight)
+print(Apple.isfresh("Green"), Banana.isfresh("Yellow"), Orange.isfresh("Orange"))
