@@ -119,3 +119,14 @@ def mniej_niz_wczesniej(pans, tab1, tab2):
 
 mniej_niz_wczesniej(Panstwo, r1999, r2014)
 ```
+
+#Cwiczenie 4
+```python
+import numpy as np
+import pandas as pd
+
+Imiona = np.array(["Anna", "Zofia", "Sylwia", "Katarzyna", "Teresa", "Tomasz", "Cezary", "Zenon", "Filip", "Adrian"])
+Wiek = np.array([21, 40, 13, 31, 34, 14, 13, 28, 20, 15])
+Plec = np.array(["K", "K" ,"K" ,"K" ,"K", "M", "M", "M", "M", "M"])
+Wga = np.array([65, ])
+```
