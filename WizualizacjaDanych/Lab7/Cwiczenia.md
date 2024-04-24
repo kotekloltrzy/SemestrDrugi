@@ -120,7 +120,7 @@ def mniej_niz_wczesniej(pans, tab1, tab2):
 mniej_niz_wczesniej(Panstwo, r1999, r2014)
 ```
 
-#Cwiczenie 4
+# Ćwiczenie 4
 ```python
 import numpy as np
 import pandas as pd
