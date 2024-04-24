@@ -127,6 +127,37 @@ import pandas as pd
 
 Imiona = np.array(["Anna", "Zofia", "Sylwia", "Katarzyna", "Teresa", "Tomasz", "Cezary", "Zenon", "Filip", "Adrian"])
 Wiek = np.array([21, 40, 13, 31, 34, 14, 13, 28, 20, 15])
-Plec = np.array(["K", "K" ,"K" ,"K" ,"K", "M", "M", "M", "M", "M"])
-Wga = np.array([65, ])
+Plec = np.array(["K", "K", "K", "K", "K", "M", "M", "M", "M", "M"])
+Waga = np.array([65, 80, 64, 69, 74, 61, 66, 61, 69, 77])
+Wzrost = np.array([179, 179, 151, 177, 170, 157, 151, 153, 160, 160])
+Okulary = np.array(["Nie", "Tak", "Nie", "Tak", "Nie", "Tak", "Nie", "Tak", "Nie", "Tak"])
+
+data = {"Imiona": Imiona, "Wiek": Wiek, "Płeć": Plec, "Waga": Waga, "Wzrost": Wzrost, "Okulary": Okulary}
+
+tabelka1 = pd.DataFrame(data)
+
+
+def alfabetycznie(kolumna):
+    wynik = []
+    temp = kolumna
+    temp.sort()
+    for x in kolumna:
+        wynik.append(x)
+
+    return wynik
+
+
+print(alfabetycznie(Imiona))
+
+
+def okularnicy(kolumna1, kolumna2):
+    wynik = []
+    for x in range(len(kolumna2)):
+        if kolumna2[x] == "Tak":
+            wynik.append(kolumna1[x])
+
+    return wynik
+
+
+print(okularnicy(Imiona, Okulary))
 ```
