@@ -1,5 +1,14 @@
 # Ćwiczenie 1
 ```python
+with open('tekst1.txt', 'r+', encoding="UTF8") as f:
+    s = f.read()
+    f.write("\nabrakadabrabra")
+print(s)
+print(type(s))
+```
+
+# Ćwiczenie 2
+```python
 import numpy as np
 import pandas as pd
 
