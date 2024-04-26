@@ -161,3 +161,28 @@ def okularnicy(kolumna1, kolumna2):
 
 print(okularnicy(Imiona, Okulary))
 ```
+# Ćwiczenie 5
+```python
+import numpy as np
+import pandas as pd
+
+liczby_calkowite = pd.Series([1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+stringi = pd.Series(["kot", "pies", "mysz", "koń", "rybka"])
+
+lista1 = ["Grudziądz", "Olszyn", "Kraków", "Warszawa"]
+
+seria1 = pd.Series(lista1)
+
+seria2 = pd.Series(liczby_calkowite)
+
+tablicanumpy1 = np.array(stringi)
+
+my_list = [1, 32, -37, 91, 12, 11, -5]
+
+my_dict = {'a': [1, 3, 2], 'b': [2, 5, 7], 'c': [3, 4, 8], 'd': [4, 10, 12]}
+
+my_array = np.array([[1, 2, 5], [-2, 3, 3], [5, 2, 6]])
+
+my_series = pd.Series([1, 32, -37, 91, 12, 11, -5], index=['a', 'b', 'c', 'd', 'e', 'f', 'g'])
+```
