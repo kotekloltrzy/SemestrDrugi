@@ -1,3 +1,4 @@
+```python
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -32,3 +33,4 @@ plt.show()
 
 plot3 = df.plot.scatter('bill_length_mm', 'bill_depth_mm', s=df['body_mass_g']**5/2000**5)
 plt.show()
+```
